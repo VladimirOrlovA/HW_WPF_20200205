@@ -1,0 +1,51 @@
+﻿<Window x:Class="HW_WPF_20200205.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW_WPF_20200205"
+        mc:Ignorable="d"
+        Title="Информация об интересном на habrahabr" Height="450" MinWidth="650" Width="650">
+
+    <Border BorderThickness="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.ColumnSpan="2">Получить информацию</Button>
+
+            <Label FontWeight="DemiBold" Grid.Row="2" Content="Заголовок"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="2" x:Name="labelTitle"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="3" Content="Описание"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="3" x:Name="labelDescription"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="4" Content="Управляющий редактор"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="4" x:Name="labelManagingEditor"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="5" Content="Источник"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="5" x:Name="labelGenerator"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="6" Content="Дата публикации"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="6" x:Name="labelPubDate"></Label>
+
+            <Button Grid.Row="8" Grid.Column="0">Создать XML</Button>
+            <TextBox Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center" Margin="10 0" Padding="10 0">C:\Download\</TextBox>
+            <Label Grid.Row="10" Grid.ColumnSpan="2" x:Name="labelException"></Label>
+        
+        </Grid>
+    </Border>
+</Window>
