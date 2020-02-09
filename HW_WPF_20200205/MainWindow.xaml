@@ -27,7 +27,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions> 
 
             <Button Grid.ColumnSpan="2">Получить информацию</Button>
 
