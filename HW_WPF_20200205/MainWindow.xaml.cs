@@ -32,9 +32,6 @@ namespace HW_WPF_20200205
 
         private void BtnGetInfo_Click(object sender, RoutedEventArgs e)
         {
-            labelException.Foreground = Brushes.LimeGreen;
-            labelException.Content = "Считали успешно";
-
             XmlDocument xmlDoc = new XmlDocument();
 
             try
@@ -48,6 +45,9 @@ namespace HW_WPF_20200205
                 labelException.Content = errMes.Substring(errMes.IndexOf(':') + 1); ;
                 return;
             }
+
+            labelException.Foreground = Brushes.LimeGreen;
+            labelException.Content = "Считали успешно";
 
             XmlElement xmlRoot = xmlDoc.DocumentElement;
 
