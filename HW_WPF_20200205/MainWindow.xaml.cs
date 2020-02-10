@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Xml;
+
 namespace HW_WPF_20200205
 {
     /// <summary>
@@ -23,6 +25,29 @@ namespace HW_WPF_20200205
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnGetInfo_Click(object sender, RoutedEventArgs e)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load("https://habrahabr.ru/rss/interesting/");
+
+            XmlElement xmlRoot = xmlDoc.DocumentElement;
+
+            int countNews = 0;
+
+            foreach (XmlNode xmlNode in xmlRoot)
+                foreach (XmlNode xmlNodeChild in xmlNode)
+                {
+                    if (xmlNodeChild.Name == "title") labelTitle.Content = xmlNodeChild.InnerText;
+                    if (xmlNodeChild.Name == "description") labelDescription.Content = xmlNodeChild.InnerText;
+                    if (xmlNodeChild.Name == "managingEditor") labelManagingEditor.Content = xmlNodeChild.InnerText;
+                    if (xmlNodeChild.Name == "generator") labelGenerator.Content = xmlNodeChild.InnerText;
+                    if (xmlNodeChild.Name == "pubDate") labelPubDate.Content = xmlNodeChild.InnerText;
+                    if (xmlNodeChild.Name == "item") countNews++;
+                }
+
+            labelCountNews.Content = countNews;
         }
     }
 }

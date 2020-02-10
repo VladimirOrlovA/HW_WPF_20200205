@@ -27,23 +27,27 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions> 
+            </Grid.ColumnDefinitions>
 
-            <Button Grid.ColumnSpan="2">Получить информацию</Button>
+            <Button Grid.ColumnSpan="2"
+                    x:Name="BtnGetInfo"
+                    Click="BtnGetInfo_Click">Получить информацию</Button>
 
             <Label FontWeight="DemiBold" Grid.Row="2" Content="Заголовок"></Label>
-            <Label FontWeight="DemiBold" Grid.Row="2" x:Name="labelTitle"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="2" Grid.Column="1" x:Name="labelTitle"></Label>
             <Label FontWeight="DemiBold" Grid.Row="3" Content="Описание"></Label>
-            <Label FontWeight="DemiBold" Grid.Row="3" x:Name="labelDescription"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="3" Grid.Column="1" x:Name="labelDescription"></Label>
             <Label FontWeight="DemiBold" Grid.Row="4" Content="Управляющий редактор"></Label>
-            <Label FontWeight="DemiBold" Grid.Row="4" x:Name="labelManagingEditor"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="4" Grid.Column="1" x:Name="labelManagingEditor"></Label>
             <Label FontWeight="DemiBold" Grid.Row="5" Content="Источник"></Label>
-            <Label FontWeight="DemiBold" Grid.Row="5" x:Name="labelGenerator"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="5" Grid.Column="1" x:Name="labelGenerator"></Label>
             <Label FontWeight="DemiBold" Grid.Row="6" Content="Дата публикации"></Label>
-            <Label FontWeight="DemiBold" Grid.Row="6" x:Name="labelPubDate"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="6" Grid.Column="1" x:Name="labelPubDate"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="7" Content="Всего новостей"></Label>
+            <Label FontWeight="DemiBold" Grid.Row="7" Grid.Column="1" x:Name="labelCountNews"></Label>
 
-            <Button Grid.Row="8" Grid.Column="0">Создать XML</Button>
-            <TextBox Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center" Margin="10 0" Padding="10 0">C:\Download\</TextBox>
+            <Button Grid.Row="9" Grid.Column="0">Создать XML</Button>
+            <TextBox Grid.Row="9" Grid.Column="1" VerticalContentAlignment="Center" Margin="10 0" Padding="10 0">C:\Download\</TextBox>
             <Label Grid.Row="10" Grid.ColumnSpan="2" x:Name="labelException"></Label>
         
         </Grid>
