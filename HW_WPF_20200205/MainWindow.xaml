@@ -32,6 +32,7 @@
             <Button Grid.ColumnSpan="2"
                     x:Name="BtnGetInfo"
                     Click="BtnGetInfo_Click">Получить информацию</Button>
+            <Label Grid.Row="1" Grid.ColumnSpan="2" x:Name="labelException"></Label>
 
             <Label FontWeight="DemiBold" Grid.Row="2" Content="Заголовок"></Label>
             <Label FontWeight="DemiBold" Grid.Row="2" Grid.Column="1" x:Name="labelTitle"></Label>
@@ -46,10 +47,10 @@
             <Label FontWeight="DemiBold" Grid.Row="7" Content="Всего новостей"></Label>
             <Label FontWeight="DemiBold" Grid.Row="7" Grid.Column="1" x:Name="labelCountNews"></Label>
 
-            <Button Grid.Row="9" Grid.Column="0">Создать XML</Button>
-            <TextBox Grid.Row="9" Grid.Column="1" VerticalContentAlignment="Center" Margin="10 0" Padding="10 0">C:\Download\</TextBox>
-            <Label Grid.Row="10" Grid.ColumnSpan="2" x:Name="labelException"></Label>
-        
+            <Button Grid.Row="9" Grid.Column="0" x:Name="CreateXML" Click="CreateXML_Click">Создать XML</Button>
+            <TextBox Grid.Row="9" Grid.Column="1" x:Name="tbPathAndFileName" VerticalContentAlignment="Center" Margin="10 0" Padding="10 0">d:\Downloads\newsList.xml</TextBox>
+            <Label Grid.Row="10" Grid.ColumnSpan="2" x:Name="labelExceptionCreateXML"></Label>
+
         </Grid>
     </Border>
 </Window>
